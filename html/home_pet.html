@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thức ăn cho chó - Shop Thú Cưng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        #create-account {
+            display: none;
+            position: relative;
+        }
+
+        #close-account {
+            position: absolute;
+            top: 44px; /* Đặt lại vị trí gần góc trên */
+            right: 350px; /* Đặt lại vị trí gần góc phải */
+            font-size: 1.5rem;
+            color: #000;
+            cursor: pointer;
+            z-index: 9999; /* Đảm bảo rằng biểu tượng 'x' hiển thị trên các phần tử khác */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Shop Thú Cưng</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="window.location.href='index.html'">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Sản phẩm</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="open-account">Tạo tài khoản</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h2 class="text-center">Thức ăn cho chó</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="https://via.placeholder.com/500" class="card-img-top" alt="Thức ăn cho chó">
+                    <div class="card-body">
+                        <h5 class="card-title">Nhà cho thú cưng</h5>
+                        <p class="card-text">Rộng rãi, có thể đi vệ sinh</p>
+                        <p><strong>Giá: 250.000 VNĐ</strong></p>
+                        <button class="btn btn-success">Thêm vào giỏ hàng</button>
+                        <a href="index.html" class="btn btn-secondary">Quay lại</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5" id="create-account">
+        <h2 class="text-center">Tạo tài khoản</h2>
+        <!-- Thêm nút đóng dấu nhân -->
+        <span id="close-account" class="bi bi-x-circle-fill"></span>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Tên đăng nhập</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center p-3 mt-4">
+        <p>&copy; 2025 Shop Thú Cưng. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("open-account").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("create-account").style.display = "block";
+        });
+
+        document.getElementById("close-account").addEventListener("click", function() {
+            document.getElementById("create-account").style.display = "none";
+        });
+    </script>
+</body>
+</html>
