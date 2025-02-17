@@ -1,0 +1,14 @@
+#create-account {
+    display: none;
+    position: relative;
+  }
+
+  #close-account {
+    position: absolute;
+    top: 44px; /* Đặt lại vị trí gần góc trên */
+    right: 350px; /* Đặt lại vị trí gần góc phải */
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+    z-index: 9999; /* Đảm bảo rằng biểu tượng 'x' hiển thị trên các phần tử khác */
+  }
